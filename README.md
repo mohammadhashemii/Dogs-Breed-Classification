@@ -1,24 +1,21 @@
-# Citizen Income Exceeding Prediction using SVM/KNN
-This project was the second assignment of the Computational Intelligence course at Shahid Beheshti University. The aim of the project was to take advatage of the SVM(using [scikit-learn](https://scikit-learn.org/stable/)) and KNN(from scratch and without other external libraries) in order to predict the income of the citizens whether they exceed from some constant number or not.
+# Dogs Breed Classification on Stanford Dogs Image Dataset using VGG-16
+This project was the third assignment of the Computational Intelligence course at Shahid Beheshti University. The aim of the project was to deal with large image datasets and use both pretrained and non-pretrained vision models to do the classification. So let's dive into it!
 
 
 # Dataset
 
-![](https://github.com/mohammadhashemii/Citizen-Income-Exceeding-Prediction/blob/master/data-description.png)
+![](https://github.com/mohammadhashemii/Dogs-Breed-Classification/blob/master/sample-data.png)
 
-The dataset has been obtained from [KEEL](https://sci2s.ugr.es/keel/dataset.php?cod=192#sub1). The Adult data set was extracted in 1994 from census data of the United States. It contains continuous and nominal attributes, describing some social information (age, race, sex, marital status, ...) about the citizens registered.training neural networks in PyTorch)
+The dataset has been obtained from [Stanford Dos Dataset](http://vision.stanford.edu/aditya86/ImageNetDogs/).It contains images of **120** breeds of dogs from around the world. This dataset has been built using images and annotation from [ImageNet](http://www.image-net.org) for the task of fine-grained image categorization. Contents of this dataset:
 
+1. Number of categories: 120
+2. Number of images: 20,580
+3. Annotations: Class labels, Bounding boxes
 
-# Preprocessing   
-The dataset itself needs lots of data-cleaning! There are many missing values for features which should be filled by existing techniques like **Imputation** or **Removing**.
-
-Also the **one-hot encoding** technique has been used for categorical features. **Binning** method also was used for some features like Age.
-
-At last, standardization and normalization was used for better convergence of the model.  
+There is no need to download the dataset into your local computer. It's just a huge amount of data! In the `DogsBreedClassification.ipynb` file you can see the documentation to how to fetch the dataset into your colab env directly.
+  
 
 # Model
 
-**SVM** with differenet kernels like **RBF** and **Polynomial** has been tried and the results are plotted in the notebook. Also there is an efficient implementation of **KNN** in the notebook. Other explanation of the this procedure is documented in the `citizenIncomeExceedingPrediction.ipynb`.
-
-
+The ImageNet Large Scale Visual Recognition Challenge (ILSVRC) is an annual computer vision competition. Each year, teams compete on two tasks. The first is to detect objects within an image coming from 200 classes, which is called object localization. The second is to classify images, each labeled with one of 1000 categories, which is called image classification. VGG 16 was proposed by Karen Simonyan and Andrew Zisserman of the Visual Geometry Group Lab of Oxford University in 2014 in the paper “**VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION**”. This model won the **1st  and 2nd** place on the above categories in 2014 ILSVRC challenge.
 
